@@ -23,6 +23,7 @@ const authService = {
     if (existingUser) {
       const error = new Error('Email já cadastrado');
       error.status = 409; // Conflict
+      
       throw error;
     }
 

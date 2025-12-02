@@ -15,8 +15,8 @@ const authMiddleware = (req, res, next) => {
 
         // 3. O token vem no formato: "Bearer token_aqui"
         // Precisamos separar e pegar só o token
-        const parts = authHeader.split(' ');
-
+        const parts = authHeader.split(' ')
+        
         // 4. Verificar se está no formato correto
         if (parts.length !== 2) {
             return res.status(401).json({
